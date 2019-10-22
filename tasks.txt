@@ -1,8 +1,8 @@
 # Art Store Tasks
 
 ## User Management
-- [ ] Remove Registration
-- [ ] Log in / Log out
+- [X] Remove Registration
+- [X] Log in / Log out
 - [ ] Can update basic info
  - [ ] Name
  - [ ] Email (gets verified when updated)
