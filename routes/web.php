@@ -13,7 +13,7 @@
 
 Route::get('/', 'HomeController@index');
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::group([
 	'middleware' => 'auth',
