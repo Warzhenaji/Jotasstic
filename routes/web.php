@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'PostController@index');
 
 Auth::routes(['register' => false]);
 
