@@ -14,12 +14,6 @@
 			<div class="px-6 py-4 rounded-b rounded-t card-bg shadow-lg mt-6">
 				<p class="text-center">Meta Data and Commenting Coming Soon!</p>
 			</div>
-			<comment-form :post-id="{{ $post->id }}" :form-url="'{{ route('dashboard.comment.store') }}'" :user="{{ auth()->user() }}"></comment-form>
-			@if (isset($post->comments) && $post->comments->count() > 0)
-				@foreach ($post->comments as $comment)
-					@include('dashboard.partials.comment', ['comment' => $comment])
-				@endforeach
-			@endif
 		</div>
 	</div>
 @endsection
