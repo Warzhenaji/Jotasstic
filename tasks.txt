@@ -1,0 +1,46 @@
+# Art Store Tasks
+
+## User Management
+- [ ] Remove Registration
+- [ ] Log in / Log out
+- [ ] Can update basic info
+ - [ ] Name
+ - [ ] Email (gets verified when updated)
+ - [ ] Password
+
+## Art Management (admin/dashboard, meaning this is only for the logged in user)
+- [ ] Migration for ArtPiece (or whatever you'll call it, update it here when you do)
+ - [ ] (unsigned big integer) id
+ - [ ] (string) title
+ - [ ] (text) description
+ - [ ] (unsigned integer) price
+ - [ ] and your timestamps (created_at and updated_at)
+- [ ] Model for ArtPiece
+- [ ] Page to view all existing ArtPiece
+- [ ] Can click on ArtPiece from previous task to view all data about a given ArtPiece
+- [ ] Can edit ArtPiece (either on previous task's page or as a new page)
+- [ ] Can delete ArtPiece (I would suggest having some notification/alert saying this is permanent delete)
+
+## Art Purchasing
+- [ ] Migration for PurchaseRequest (again, call it what you will then updated it here)
+ - [ ] (unsigned big integer) id
+ - [ ] (string) uid, meaning unique id
+ - [ ] (timestamp, nullable) payment_received_at, this is when Cierra receives payment for the order
+ - [ ] (timestamp, nullable) fulfilled_at, this will denote when the ArtPiece was shipped out and the transaction is considered complete. You can use this to also denote whether an order is "open" or "closed"
+ - [ ] (string) requester_name
+ - [ ] (string) requester_email
+ - [ ] (string, nullable) address_1
+ - [ ] (string, nullable) address_2
+ - [ ] (string, nullable) city
+ - [ ] (string, nullable) state
+ - [ ] (string, nullable) zip, I say to use this as a string because you don't know if she'll get a request from Canada or the US zip she gets will be 12345-9876
+ - [ ] (text, nullable) notes
+ - [ ] (text, nullable) internal_notes
+ - [ ] and your timestamps (created_at and updated_at)
+- [ ] Model for PurchaseRequest
+- [ ] Page to view all PurchaseRequest
+ - [ ] Default to ones with status of "open"
+ - [ ] Also can view "closed" ones
+- [ ] Can click on PurchaseRequest from previous task to view all data about a given PurchaseRequest
+- [ ] Can edit/update a PurchaseRequest
+- [ ] Can delete a PurchaseRequest, I'd be careful about doing this only for spam requests. You'll want to keep a record of every valid request you get.

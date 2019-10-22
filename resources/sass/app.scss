@@ -1,0 +1,111 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import 'variables';
+
+.nav-link {
+	@apply mt-4 inline-block mt-0 text-teal-200;
+}
+
+.nav-link:hover {
+	@apply text-white;
+}
+
+.body-bg {
+	background-color: #424242;
+	min-height: 100vh;
+	height: 100%;
+}
+
+.nav-bg {
+	background-color: #121212;
+}
+
+.card-bg {
+	background-color: #D9D9D9;
+}
+
+#user-dropdown {
+	transition: all 0.5s ease;
+	display: none;	
+}
+
+#user-dropdown-wrap:hover > #user-dropdown,  
+#user-dropdown:hover {
+	display: block;
+}
+
+.user-banner {
+	background: border-box transparent url('../img/user-banner.jpg') center no-repeat;
+}
+
+.text-shadow-black {
+	text-shadow: 0 0 4px black;
+}
+
+.text-shadow-sm {
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.75);
+}
+
+.post-card-row {
+	.post-card {
+		@apply mr-4;
+	}
+	.post-card:last-child {
+		@apply mr-0;
+	}
+}
+
+.status-msg {
+	opacity: 1;
+	transition: opacity 1s ease-in-out;
+}
+
+.status-msg.hide-opacity {
+	opacity: 0;
+}
+
+.bg-nim-blue-darkest {
+	background-color: $nim-blue-darkest;
+}
+
+.bg-nim-blue-dark {
+	background-color: $nim-blue-dark;
+}
+
+.bg-nim-blue {
+	background-color: $nim-blue;
+}
+
+.bg-nim-blue-light {
+	background-color: $nim-blue-light;
+}
+
+.bg-nim-blue-lightest {
+	background-color: $nim-blue-lightest;
+}
+
+.bg-nim-teal {
+	background-color: $nim-teal;
+}
+
+.invite-table {
+	tbody tr {
+		@apply bg-gray-400;
+	}
+	tbody tr td {
+		@apply p-4 text-center;
+	}
+	tbody tr:nth-child(even) {
+		@apply bg-gray-200;
+	}
+	tbody tr:hover {
+		background-color: $nim-teal;
+		color: white;
+	}
+}
+
+@import "components/button";
