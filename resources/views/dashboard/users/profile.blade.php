@@ -15,6 +15,16 @@
 				<div class="flex flex-col">
 					<p class="text-gray-500 text-sm font-bold uppercase">Join Date</p>
 					<p class="text-gray-100 text-2xl font-bold">{{ $user->join_date }}</p>
+					<form>
+						<label for="name" class="text-gray-500 text-sm font-bold uppercase">Name</label><br>
+						<input id="name" name="name" placeholder="Update name..." class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"><br>
+						<label for="email" class="text-gray-500 text-sm font-bold uppercase">Email for Client Contact</label><br>
+						<input id="email" name="email" placeholder="Update email..." class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"><br>
+						<label for="psw" class="text-gray-500 text-sm font-bold uppercase">Change Account Password</label><br>
+						<input id="psw" name="psw" placeholder="New password..." class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"><br>
+						<label for="psw_confirm" class="text-gray-500 text-sm font-bold uppercase">Confirm New Password</label><br>
+						<input id="psw_confirm" name="psw_confirm" placeholder="Confirm new password..." class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"><br>
+					</form>
 				</div>
 			</div>
 			<div class="flex flex-col w-3/4 px-4">

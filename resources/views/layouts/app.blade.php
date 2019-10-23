@@ -25,6 +25,7 @@
             <div class="flex items-center flex-shrink-0 text-white mr-6">               
                 <span class="font-semibold text-xl tracking-tight">
                     <a href="{{ route('dashboard.post.index') }}">{{ config('app.name', 'Laravel') }}</a>
+                    <a href="" class="ml-10">About Jo</a>
                 </span>
             </div>
             <div class="block lg:hidden">
@@ -42,7 +43,7 @@
                     <a href="{{ route('dashboard.post.create') }}" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Add Artwork</a>
                     <navbar-dropdown
                         :links="{{ json_encode([
-                            ['name' => 'My Profile', 'url' => route('dashboard.user.profile')],
+                            ['name' => 'Admin Tools', 'url' => route('dashboard.user.profile')],
                         ]) }}"
                         :logout-url="'{{ route('logout') }}'"
                         :user="{{ auth()->user() }}"
