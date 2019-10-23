@@ -17,7 +17,7 @@ class PostController extends Controller
     }
 
     public function show(Post $post) {
-        $post->load('comments.user', 'user');
+        $post->load('user');
         $payload = [
             'post' => $post
         ];
@@ -51,15 +51,15 @@ class PostController extends Controller
     	$newPost = Post::create($inputs);
 
         if ($newPost) {
-            return redirect()->route('dashboard.post.index')->with('status', 'It done been created.');
+            return redirect()->route('dashboard.post.index')->with('status', 'Post Created!');
         }
-        return redirect()->route('dashboard.post.index')->with('status', 'Ya done messed up, Aaron.');
+        return redirect()->route('dashboard.post.index')->with('status', 'Something went wrong...');
     }
 
     public function edit(Post $post) {
     	$user = auth()->user();
     	if ($post->user_id !== $user->id) {
-    		return redirect()->back()->with('status', 'You Shall Not Pass!');
+    		return redirect()->back()->with('status', 'Please login');
     	}
     	$payload = [
     		'post' => $post
@@ -70,7 +70,7 @@ class PostController extends Controller
     public function update(Post $post, Request $request) {
     	$user = auth()->user();
     	if ($post->user_id !== $user->id) {
-    		return redirect()->route('dashboard.home')->with('status', 'You Shall Not Pass!');
+    		return redirect()->route('dashboard.home')->with('status', 'Please log in');
     	}
 
     	$title = $request->input('title');

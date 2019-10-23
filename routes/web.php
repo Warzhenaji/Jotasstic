@@ -21,6 +21,7 @@ Route::group([
 	'prefix'     => 'dashboard',
 ], function () {
 	Route::get('/', 'HomeController@index')->name('dashboard.home');
+	Route::get('/about', 'AboutController@index')->name('public.about');
 
 	Route::get('/post', 'PostController@index')->name('dashboard.post.index');
 	Route::get('/post/create', 'PostController@create')->name('dashboard.post.create');
