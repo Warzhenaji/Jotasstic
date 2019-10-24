@@ -32,4 +32,5 @@ Route::group([
 
 	Route::get('/profile', 'UserController@showProfile')->name('dashboard.user.profile');
 	Route::post('/profile/bio', 'UserController@updateBio')->name('dashboard.user.update_bio');
+	Route::post('/profile', 'UserController@updateUser')->name('dashboard.user.update');
 });

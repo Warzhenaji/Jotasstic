@@ -38,4 +38,8 @@ class UserController extends Controller
 			'message' => "We can't do it, Captain. We don't have the power."
 		]);
     }
+
+    public function updateUser(Request $request) {
+        return $request->all();
+    }
 }
