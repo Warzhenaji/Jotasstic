@@ -25,7 +25,7 @@
             <div class="flex items-center flex-shrink-0 text-white mr-6">               
                 <span class="font-semibold text-xl tracking-tight">
                     <a href="{{ route('dashboard.post.index') }}">{{ config('app.name', 'Laravel') }}</a>
-                    <a href="" class="ml-10">About Jo</a>
+                    <a href="{{ route('public.about') }}" class="ml-10">About Jo</a>
                 </span>
             </div>
             <div class="block lg:hidden">
