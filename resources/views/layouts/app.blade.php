@@ -76,7 +76,7 @@
     </div>
     <div class="bg-nim-blue-darkest w-full block flex-grow lg:flex lg:items-center lg:w-auto">
         <footer id="footer" class="text-center w-full text-center border-grey p-4">
-            <p class="text-white">Copyright 2019 &copy; Jotasstic</p>
+            <p class="text-white">&copy; 2019 Jotasstic</p>
         </footer>
     </div>
 </body>
