@@ -22,6 +22,8 @@ Route::group([
 ], function () {
 	Route::get('/', 'HomeController@index')->name('dashboard.home');
 	Route::get('/about', 'AboutController@index')->name('public.about');
+	Route::get('/purchase', 'PurchaseController@index')->name('public.purchase');
+	Route::get('/contact', 'ContactController@index')->name('public.contact');
 
 	Route::get('/post', 'PostController@index')->name('dashboard.post.index');
 	Route::get('/post/create', 'PostController@create')->name('dashboard.post.create');

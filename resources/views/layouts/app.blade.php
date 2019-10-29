@@ -26,6 +26,8 @@
                 <span class="font-semibold text-xl tracking-tight">
                     <a href="{{ route('dashboard.post.index') }}">{{ config('app.name', 'Laravel') }}</a>
                     <a href="{{ route('public.about') }}" class="ml-10">About Jo</a>
+                    <a href="{{ route('public.purchase') }}" class="ml-10">Purchase Artwork</a>
+                    <a href="{{ route('public.contact') }}" class="ml-10">Contact</a>
                 </span>
             </div>
             <div class="block lg:hidden">
