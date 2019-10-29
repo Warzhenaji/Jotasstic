@@ -40,6 +40,20 @@ class UserController extends Controller
     }
 
     public function updateUser(Request $request) {
-        return $request->all();
+        $user = auth()->user();
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        if ($user->update()) {
+            return response()->json([
+                'error' => false,
+                'title' => "Success",
+                'message' => "Information Updated"
+            ]);
+        }
+        return response()->json([
+            'error' => true,
+            'title' => "Aw snap, Gur.",
+            'message' => "Something went wrong..."
+        ]);
     }
 }

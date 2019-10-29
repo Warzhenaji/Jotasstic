@@ -12,6 +12,9 @@
 */
 
 Route::get('/', 'PostController@index');
+Route::get('/about', 'AboutController@index')->name('public.about');
+Route::get('/purchase', 'PurchaseController@index')->name('public.purchase');
+Route::get('/contact', 'ContactController@index')->name('public.contact');
 
 Auth::routes(['register' => false]);
 
@@ -21,9 +24,7 @@ Route::group([
 	'prefix'     => 'dashboard',
 ], function () {
 	Route::get('/', 'HomeController@index')->name('dashboard.home');
-	Route::get('/about', 'AboutController@index')->name('public.about');
-	Route::get('/purchase', 'PurchaseController@index')->name('public.purchase');
-	Route::get('/contact', 'ContactController@index')->name('public.contact');
+	
 
 	Route::get('/post', 'PostController@index')->name('dashboard.post.index');
 	Route::get('/post/create', 'PostController@create')->name('dashboard.post.create');
@@ -33,6 +34,5 @@ Route::group([
 	Route::get('/post/{post}', 'PostController@show')->name('dashboard.post.show');
 
 	Route::get('/profile', 'UserController@showProfile')->name('dashboard.user.profile');
-	Route::post('/profile/bio', 'UserController@updateBio')->name('dashboard.user.update_bio');
 	Route::post('/profile', 'UserController@updateUser')->name('dashboard.user.update');
 });

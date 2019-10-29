@@ -8,6 +8,7 @@
  - [ ] Email (gets verified when updated)
  - [ ] Password
 - [ ] Remove Login Requirement To See Front Page
+- [ ] Remove Bio Functionality on Admin Tools
 
 
 ## Art Management (admin/dashboard, meaning this is only for the logged in user)

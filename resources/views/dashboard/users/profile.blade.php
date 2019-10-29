@@ -9,13 +9,10 @@
 	<div class="flex w-full py-4 justify-center">
 		<div class="flex w-3/4">
 			<div class="flex flex-col w-1/4 mr-6">
-				<user-bio-card
-					:update-url="'{{ route('dashboard.user.update_bio') }}'"
-					:user="{{ auth()->user() }}"></user-bio-card>
 				<div class="flex flex-col">
 					<p class="text-gray-500 text-sm font-bold uppercase">Join Date</p>
 					<p class="text-gray-100 text-2xl font-bold">{{ $user->join_date }}</p>
-					<form method="{{ route('dashboard.user.update') }}" action="post">
+					<form action="{{ route('dashboard.user.update') }}" method="post">
 						@csrf
 						<label for="name" class="text-gray-500 text-sm font-bold uppercase">Name</label><br>
 						<input id="name" name="name" placeholder="Update name..." class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" value="{{ auth()->user()->name }}"><br>
