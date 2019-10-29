@@ -72,5 +72,8 @@
             @yield('content')
         </main>
     </div>
+    <footer id="footer" class="text-center">
+        <p>Copyright 2019 &copy; Jotasstic</p>
+    </footer>
 </body>
 </html>

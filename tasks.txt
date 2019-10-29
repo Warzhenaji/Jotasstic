@@ -48,5 +48,5 @@
 
 ## Site Design
 - [ ] Make the site auto adjust to different window sizes (mimimized, maximized, etc.)
-- [ ] Footer with Copyright statement and symbol.
+- [X] Footer with Copyright statement and symbol.
 - [ ] Insert autograph image into various site locations (home button, front page logo, etc.)
