@@ -74,8 +74,10 @@
             @yield('content')
         </main>
     </div>
-    <footer id="footer" class="text-center">
-        <p>Copyright 2019 &copy; Jotasstic</p>
-    </footer>
+    <div class="bg-nim-blue-darkest w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <footer id="footer" class="text-center w-full text-center border-grey p-4">
+            <p class="text-white">Copyright 2019 &copy; Jotasstic</p>
+        </footer>
+    </div>
 </body>
 </html>
