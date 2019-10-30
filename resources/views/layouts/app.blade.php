@@ -56,20 +56,22 @@
             </div>
         </nav>
         <main class="pb-4">
-             @if (session('status'))
-                <div class="flex items-center justify-center w-full my-4">
-                    <div class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
-                        <span class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">Yo!</span>
-                        <span class="font-semibold mr-2 text-left flex-auto">{{ session('status') }}</span>
+            @if (isset($_POST['submit']))
+                 @if (is_array(session('status')))
+                    <div class="flex items-center justify-center w-full my-4">
+                        <div class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
+                            <span class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">{{ session('status')['title'] }}</span>
+                            <span class="font-semibold mr-2 text-left flex-auto">{{ session('status')['message'] }}</span>
+                        </div>
                     </div>
-                </div>
-             @elseif (session('error'))
-                <div class="flex items-center justify-center w-full my-4">
-                    <div class="p-2 bg-orange-600 items-center text-orange-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
-                        <span class="flex rounded-full bg-orange-400 uppercase px-2 py-1 text-xs font-bold mr-3">Big Yikes!</span>
-                        <span class="font-semibold mr-2 text-left flex-auto">{{ session('error') }}</span>
+                 @else
+                    <div class="flex items-center justify-center w-full my-4">
+                        <div class="p-2 bg-orange-600 items-center text-orange-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
+                            <span class="flex rounded-full bg-orange-400 uppercase px-2 py-1 text-xs font-bold mr-3">Big Yikes!</span>
+                            <span class="font-semibold mr-2 text-left flex-auto">{{ session('error') }}</span>
+                        </div>
                     </div>
-                </div>
+                @endif
             @endif
             @yield('content')
         </main>

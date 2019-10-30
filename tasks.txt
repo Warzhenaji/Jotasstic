@@ -49,6 +49,6 @@
 - [ ] Can delete a PurchaseRequest, I'd be careful about doing this only for spam requests. You'll want to keep a record of every valid request you get.
 
 ## Site Design
-- [ ] Make the site auto adjust to different window sizes (mimimized, maximized, etc.)
+- [ ] Make the site auto adjust to different window sizes (mimimized, maximized, mobile, etc.)
 - [X] Footer with Copyright statement and symbol.
 - [ ] Insert autograph image into various site locations (home button, front page logo, etc.)
