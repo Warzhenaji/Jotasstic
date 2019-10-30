@@ -27,16 +27,18 @@ class UserController extends Controller
         $user->name = $request->input('name');
         $user->email = $request->input('email');
         if ($user->update()) {
-            return redirect()->back()->with('status', [
+            session()->flash('status', [
                 'error' => false,
                 'title' => "Success",
                 'message' => "Information Updated"
             ]);
+            return redirect()->back();
         }
-        return redirect()->back()->with('status', [
+        session()->flash('status', [
             'error' => true,
             'title' => "Aw snap, Gur.",
             'message' => "Something went wrong..."
         ]);
+        return redirect()->back();
     }
 }
