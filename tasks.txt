@@ -55,3 +55,4 @@
 
 ## Known Issues
 - [ ] Cannot delete posts
+- [ ] Can update post, but after update occurs, all flash notices appear at the same time on the landing page
