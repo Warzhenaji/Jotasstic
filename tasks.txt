@@ -4,11 +4,11 @@
 - [X] Remove Registration
 - [X] Log in / Log out
 - [ ] Can update basic info
- - [ ] Name
- - [ ] Email (gets verified when updated)
+ - [X] Name
+ - [X] Email (gets verified when updated)
  - [ ] Password
 - [ ] Remove Login Requirement To See Front Page
-- [ ] Remove Bio Functionality on Admin Tools
+- [X] Remove Bio Functionality on Admin Tools
 
 
 ## Art Management (admin/dashboard, meaning this is only for the logged in user)
@@ -19,9 +19,9 @@
  - [ ] (unsigned integer) price
  - [ ] and your timestamps (created_at and updated_at)
 - [ ] Model for ArtPiece
-- [ ] Page to view all existing ArtPiece
+- [X] Page to view all existing ArtPiece
 - [ ] Can click on ArtPiece from previous task to view all data about a given ArtPiece
-- [ ] Can edit ArtPiece (either on previous task's page or as a new page)
+- [X] Can edit ArtPiece (either on previous task's page or as a new page)
 - [ ] Can delete ArtPiece (I would suggest having some notification/alert saying this is permanent delete)
 
 ## Art Purchasing
@@ -52,3 +52,6 @@
 - [ ] Make the site auto adjust to different window sizes (mimimized, maximized, mobile, etc.)
 - [X] Footer with Copyright statement and symbol.
 - [ ] Insert autograph image into various site locations (home button, front page logo, etc.)
+
+## Known Issues
+- [ ] Cannot delete posts
