@@ -4,6 +4,8 @@
 		<div class="font-bold text-xl mb-2">
 			<a href="{{ route('dashboard.post.show', $post->id) }}">{{ $post->title }}</a>
 		</div>
+		@auth
 		<a href="{{ route('dashboard.post.edit', $post->id) }}" class="text-right block">Edit</a>
+		@endauth
 	</div>
 </div>
