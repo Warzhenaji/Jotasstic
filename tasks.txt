@@ -7,7 +7,7 @@
  - [X] Name
  - [X] Email (gets verified when updated)
  - [ ] Password
-- [ ] Remove Login Requirement To See Front Page
+- [X] Remove Login Requirement To See Front Page
 - [X] Remove Bio Functionality on Admin Tools
 
 

@@ -16,6 +16,8 @@ Route::get('/about', 'AboutController@index')->name('public.about');
 Route::get('/purchase', 'PurchaseController@index')->name('public.purchase');
 Route::get('/contact', 'ContactController@index')->name('public.contact');
 
+Route::get('/post', 'PostController@index')->name('dashboard.post.index');
+
 Auth::routes(['register' => false]);
 
 Route::group([
@@ -26,7 +28,7 @@ Route::group([
 	Route::get('/', 'HomeController@index')->name('dashboard.home');
 	
 
-	Route::get('/post', 'PostController@index')->name('dashboard.post.index');
+	
 	Route::get('/post/create', 'PostController@create')->name('dashboard.post.create');
 	Route::post('/post', 'PostController@store')->name('dashboard.post.store');
 	Route::get('/post/edit/{post}', 'PostController@edit')->name('dashboard.post.edit');
