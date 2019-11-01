@@ -11,12 +11,19 @@
 |
 */
 
+Route::group([
+	'namespace' => 'Dashboard',
+], function () {
+
 Route::get('/', 'PostController@index');
 Route::get('/about', 'AboutController@index')->name('public.about');
 Route::get('/purchase', 'PurchaseController@index')->name('public.purchase');
 Route::get('/contact', 'ContactController@index')->name('public.contact');
 
 Route::get('/post', 'PostController@index')->name('dashboard.post.index');
+Route::get('/post/{post}', 'PostController@show')->name('dashboard.post.show');
+
+});
 
 Auth::routes(['register' => false]);
 
@@ -33,7 +40,6 @@ Route::group([
 	Route::post('/post', 'PostController@store')->name('dashboard.post.store');
 	Route::get('/post/edit/{post}', 'PostController@edit')->name('dashboard.post.edit');
 	Route::post('/post/edit/{post}', 'PostController@update')->name('dashboard.post.update');
-	Route::get('/post/{post}', 'PostController@show')->name('dashboard.post.show');
 
 	Route::get('/profile', 'UserController@showProfile')->name('dashboard.user.profile');
 	Route::post('/profile', 'UserController@updateUser')->name('dashboard.user.update');
