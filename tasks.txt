@@ -12,24 +12,24 @@
 
 
 ## Art Management (admin/dashboard, meaning this is only for the logged in user)
-- [ ] Migration for ArtPiece (or whatever you'll call it, update it here when you do)
+- [ ] Migration for Artwork (or whatever you'll call it, update it here when you do)
  - [ ] (unsigned big integer) id
  - [ ] (string) title
  - [ ] (text) description
  - [ ] (unsigned integer) price
  - [ ] and your timestamps (created_at and updated_at)
-- [ ] Model for ArtPiece
-- [X] Page to view all existing ArtPiece
-- [ ] Can click on ArtPiece from previous task to view all data about a given ArtPiece
-- [X] Can edit ArtPiece (either on previous task's page or as a new page)
-- [ ] Can delete ArtPiece (I would suggest having some notification/alert saying this is permanent delete)
+- [ ] Model for Artwork
+- [X] Page to view all existing Artwork
+- [ ] Can click on Artwork from previous task to view all data about a given Artwork
+- [X] Can edit Artwork (either on previous task's page or as a new page)
+- [ ] Can delete Artwork (I would suggest having some notification/alert saying this is permanent delete)
 
 ## Art Purchasing
 - [ ] Migration for PurchaseRequest (again, call it what you will then update it here)
  - [ ] (unsigned big integer) id
  - [ ] (string) uid, meaning unique id
  - [ ] (timestamp, nullable) payment_received_at, this is when Cierra receives payment for the order
- - [ ] (timestamp, nullable) fulfilled_at, this will denote when the ArtPiece was shipped out and the transaction is considered complete. You can use this to also denote whether an order is "open" or "closed"
+ - [ ] (timestamp, nullable) fulfilled_at, this will denote when the Artwork was shipped out and the transaction is considered complete. You can use this to also denote whether an order is "open" or "closed"
  - [ ] (string) requester_name
  - [ ] (string) requester_email
  - [ ] (string, nullable) address_1
