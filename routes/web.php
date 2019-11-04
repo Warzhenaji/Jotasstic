@@ -34,8 +34,6 @@ Route::group([
 ], function () {
 	Route::get('/', 'HomeController@index')->name('dashboard.home');
 	
-
-	
 	Route::get('/post/create', 'PostController@create')->name('dashboard.post.create');
 	Route::post('/post', 'PostController@store')->name('dashboard.post.store');
 	Route::get('/post/edit/{post}', 'PostController@edit')->name('dashboard.post.edit');
@@ -43,4 +41,5 @@ Route::group([
 
 	Route::get('/profile', 'UserController@showProfile')->name('dashboard.user.profile');
 	Route::post('/profile', 'UserController@updateUser')->name('dashboard.user.update');
+	Route::get('/orders', 'OrdersController@index')->name('dashboard.user.orders');
 });

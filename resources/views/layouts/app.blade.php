@@ -45,7 +45,8 @@
                     <a href="{{ route('dashboard.post.create') }}" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Add Artwork</a>
                     <navbar-dropdown
                         :links="{{ json_encode([
-                            ['name' => 'Admin Tools', 'url' => route('dashboard.user.profile')],
+                            ['name' => 'Admin Profile', 'url' => route('dashboard.user.profile')],
+                            ['name' => 'Orders', 'url' => route('dashboard.user.orders') ],
                         ]) }}"
                         :logout-url="'{{ route('logout') }}'"
                         :user="{{ auth()->user() }}"
