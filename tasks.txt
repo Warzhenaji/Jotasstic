@@ -54,5 +54,6 @@
 - [ ] Insert autograph image into various site locations (home button, front page logo, etc.)
 
 ## Known Issues
+- [ ] Error when logging in. Site does not redirect without an error.
 - [ ] Cannot delete posts
 - [ ] Can update post, but after update occurs, all flash notices appear at the same time on the landing page
