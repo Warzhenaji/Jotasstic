@@ -24,8 +24,9 @@
         <nav class="flex bg-nim-blue-darkest items-center justify-between flex-wrap nav-bg p-6">
             <div class="flex items-center flex-shrink-0 text-white mr-6">               
                 <span class="font-semibold text-xl tracking-tight">
-                    <a href="{{ route('dashboard.post.index') }}">{{ config('app.name', 'Laravel') }}</a>
+                    <a href="{{ url('/') }}">{{ config('app.name', 'Laravel') }}</a>
                     <a href="{{ route('public.about') }}" class="ml-10">About Jo</a>
+                    <a href="{{ route('dashboard.post.explore') }}" class="ml-10">Explore</a>
                     <a href="{{ route('public.purchase') }}" class="ml-10">Purchase Artwork</a>
                     <a href="{{ route('public.contact') }}" class="ml-10">Contact</a>
                 </span>

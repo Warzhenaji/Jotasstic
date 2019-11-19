@@ -20,8 +20,8 @@ Route::get('/about', 'AboutController@index')->name('public.about');
 Route::get('/purchase', 'PurchaseController@index')->name('public.purchase');
 Route::get('/contact', 'ContactController@index')->name('public.contact');
 
-Route::get('/post', 'PostController@index')->name('dashboard.post.index');
-Route::post('/post/{post}', 'PostController@show')->name('dashboard.post.show');
+Route::get('/explore', 'PostController@explore')->name('dashboard.post.explore');
+Route::post('/post/{post}', 'PostController@show')->name('dashboard.posts.show');
 
 });
 

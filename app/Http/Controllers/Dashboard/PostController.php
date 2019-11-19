@@ -10,18 +10,14 @@ use Illuminate\Support\Str;
 class PostController extends Controller
 {
 	public function index() {
-    	$payload = [
-    		'posts' => Post::all()
-    	];
-    	return view('dashboard.posts.index')->with($payload);
+    	return view('landing');
     }
 
-    public function show(Post $post) {
-        $post->load('user');
+    public function explore() {
         $payload = [
-            'post' => $post
+            'posts' => Post::all()
         ];
-        return view('dashboard.posts.show')->with($payload);
+        return view('dashboard.posts.explore')->with($payload);
     }
 
     public function create() {
