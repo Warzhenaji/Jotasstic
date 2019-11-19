@@ -4,12 +4,12 @@
 <div class="flex justify-center items-center py-20">
 <div class="w-1/5 flex">
 <form method="POST" action="{{ route('login') }}" class="bg-gray-400 shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full">
-                        @csrf
+    @csrf
     <div class="mb-4">
       <label class="block text-gray-900 text-sm font-bold mb-2" for="email">
         Email
       </label>
-      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-white" id="email" type="email" name="email" placeholder="bilbo@theshire.org">
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-white" id="email" type="email" name="email" placeholder="Email address..">
     </div>
     <div class="mb-6">
       <label class="block text-gray-900 text-sm font-bold mb-2" for="password">
