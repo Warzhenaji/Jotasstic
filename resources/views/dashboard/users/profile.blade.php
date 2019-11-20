@@ -23,7 +23,7 @@
 						<label for="psw_confirm" class="text-gray-500 text-sm font-bold uppercase">Confirm New Password</label><br>
 						<input id="psw_confirm" name="psw_confirm" placeholder="Confirm new password..." class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"><br>
 
-						<button type="submit">Submit</button>
+						<button type="submit" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Submit</button>
 					</form>
 				</div>
 			</div>

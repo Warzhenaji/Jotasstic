@@ -26,19 +26,30 @@ class UserController extends Controller
         $user = auth()->user();
         $user->name = $request->input('name');
         $user->email = $request->input('email');
-        if ($user->update()) {
+        $user->password = $request->input('psw');
+        $password_confirm = $request->input('psw_confirm');
+        if ($password_confirm === $user->password || $password_confirm == null || $user->password == null) {
+            if ($user->update()) {
+                session()->flash('status', [
+                    'error' => false,
+                    'title' => "Success",
+                    'message' => "Information Updated"
+                ]);
+                return redirect()->back();
+            }
             session()->flash('status', [
-                'error' => false,
-                'title' => "Success",
-                'message' => "Information Updated"
+                'error' => true,
+                'title' => "Aw snap, Gur.",
+                'message' => "Something went wrong..."
+            ]);
+            return redirect()->back();
+        } else {
+            session()->flash('status', [
+                'error' => true,
+                'title' => "Aw snap, Gur.",
+                'message' => "Something went wrong..."
             ]);
             return redirect()->back();
         }
-        session()->flash('status', [
-            'error' => true,
-            'title' => "Aw snap, Gur.",
-            'message' => "Something went wrong..."
-        ]);
-        return redirect()->back();
     }
 }
