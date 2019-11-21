@@ -3,7 +3,7 @@
 ## User Management
 - [X] Remove Registration
 - [X] Log in / Log out
-- [ ] Can update basic info
+- [X] Can update basic info
  - [X] Name
  - [X] Email (gets verified when updated)
  - [X] Password

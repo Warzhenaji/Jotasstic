@@ -13,6 +13,10 @@ class PostController extends Controller
     	return view('landing');
     }
 
+    public function show() {
+        
+    }
+
     public function explore() {
         $payload = [
             'posts' => Post::all()
@@ -86,5 +90,16 @@ class PostController extends Controller
     		return redirect()->route('dashboard.home')->with('status', 'It done been updated.');
     	}
     	return redirect()->route('dashboard.home')->with('status', 'Ya done messed up, Aaron.');
+    }
+
+    public function delete(Post $post) {
+        $user = auth()->user();
+        if ($post->user_id !== $user->id) {
+            return redirect()->route('dashboard.home')->with('status', 'Please log in');
+        }
+
+        $post->delete();
+
+        return redirect()->back();
     }
 }

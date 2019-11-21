@@ -21,7 +21,7 @@ Route::get('/purchase', 'PurchaseController@index')->name('public.purchase');
 Route::get('/contact', 'ContactController@index')->name('public.contact');
 
 Route::get('/explore', 'PostController@explore')->name('dashboard.post.explore');
-Route::post('/post/{post}', 'PostController@show')->name('dashboard.posts.show');
+Route::get('/post/{post}', 'PostController@show')->name('dashboard.posts.show');
 
 });
 
