@@ -6,7 +6,7 @@
 - [ ] Can update basic info
  - [X] Name
  - [X] Email (gets verified when updated)
- - [ ] Password
+ - [X] Password
 - [X] Remove Login Requirement To See Front Page
 - [X] Remove Bio Functionality on Admin Tools
 
