@@ -22,7 +22,12 @@
 	- [X] Brian Check
 - [ ] Migrations
 - [ ] Models
+	- [ ] Copy Post.php to Art.php then go through that model file and make sure it is using the name Art.
 - [ ] Controllers
+	- [ ] Rename Controller Files As Needed
+	- [ ] Create/Rename all methods as listed in Routes
+	- [ ] Write ArtController show method
+	- [ ] Write ArtController requestPurchase method
 
 ## User Management
 - [X] Remove Registration
