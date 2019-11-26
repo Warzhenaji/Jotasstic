@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Post;
 use Illuminate\Support\Str;
 
-class PostController extends Controller
+class ArtController extends Controller
 {
 	public function index() {
     	return view('landing');
@@ -19,20 +19,20 @@ class PostController extends Controller
 
     public function explore() {
         $payload = [
-            'posts' => Post::all()
+            'art' => Art::all()
         ];
-        return view('dashboard.posts.explore')->with($payload);
+        return view('dashboard.art.explore')->with($payload);
     }
 
     public function create() {
-    	return view('dashboard.posts.create');
+    	return view('dashboard.art.create');
     }
 
     public function store(Request $request) {
     	$user = auth()->user();
     	$title = $request->input('title');
     	$description = $request->input('description');
-    	$file = $request->file('meme');
+    	$file = $request->file('art');
 
         $fullFileName = $file->getClientOriginalName();
     	$filename = pathinfo($fullFileName, PATHINFO_FILENAME);
@@ -48,28 +48,28 @@ class PostController extends Controller
 
     	$request->meme->storeAs('img/uploads', $newFileName, 'public_path');
 
-    	$newPost = Post::create($inputs);
+    	$newArt = Art::create($inputs);
 
-        if ($newPost) {
-            return redirect()->route('dashboard.post.index')->with('status', 'Post Created!');
+        if ($newArt) {
+            return redirect()->route('dashboard.art.index')->with('status', 'Media Posted!');
         }
-        return redirect()->route('dashboard.post.index')->with('status', 'Something went wrong...');
+        return redirect()->route('dashboard.art.index')->with('status', 'Something went wrong...');
     }
 
-    public function edit(Post $post) {
+    public function edit(Art $art) {
     	$user = auth()->user();
-    	if ($post->user_id !== $user->id) {
+    	if ($art->user_id !== $user->id) {
     		return redirect()->back()->with('status', 'Please login');
     	}
     	$payload = [
-    		'post' => $post
+    		'art' => $art
     	];
-    	return view('dashboard.posts.edit')->with($payload);
+    	return view('dashboard.art.edit')->with($payload);
     }
 
-    public function update(Post $post, Request $request) {
+    public function update(Art $art, Request $request) {
     	$user = auth()->user();
-    	if ($post->user_id !== $user->id) {
+    	if ($art->user_id !== $user->id) {
     		return redirect()->route('dashboard.home')->with('status', 'Please log in');
     	}
 
@@ -85,20 +85,20 @@ class PostController extends Controller
     	];
     	/*return response()->json($inputs);*/
 
-    	$updatedPost = $post->update($inputs);
-    	if ($updatedPost) {
-    		return redirect()->route('dashboard.home')->with('status', 'It done been updated.');
+    	$updatedArt = $art->update($inputs);
+    	if ($updatedArt) {
+    		return redirect()->route('dashboard.home')->with('status', 'Media Updated!');
     	}
-    	return redirect()->route('dashboard.home')->with('status', 'Ya done messed up, Aaron.');
+    	return redirect()->route('dashboard.home')->with('status', 'Something went wrong...');
     }
 
-    public function delete(Post $post) {
+    public function delete(Art $Art) {
         $user = auth()->user();
-        if ($post->user_id !== $user->id) {
+        if ($art->user_id !== $user->id) {
             return redirect()->route('dashboard.home')->with('status', 'Please log in');
         }
 
-        $post->delete();
+        $art->delete();
 
         return redirect()->back();
     }
