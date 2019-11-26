@@ -15,13 +15,14 @@ Route::group([
 	'namespace' => 'Dashboard',
 ], function () {
 
-Route::get('/', 'PostController@index');
+Route::get('/', 'ArtController@index')->name('dashboard.art.index');
+Route::get('/art/{art}', 'ArtController@show')->name('dashboard.art.show');
+Route::post('/art/{art}', 'ArtController@requestPurchase')->name('art.request_purchase');
+
 Route::get('/about', 'AboutController@index')->name('public.about');
 Route::get('/purchase', 'PurchaseController@index')->name('public.purchase');
 Route::get('/contact', 'ContactController@index')->name('public.contact');
-
-Route::get('/explore', 'PostController@explore')->name('dashboard.post.explore');
-Route::get('/post/{post}', 'PostController@show')->name('dashboard.posts.show');
+Route::get('/explore', 'ArtController@explore')->name('dashboard.art.explore');
 
 });
 
@@ -32,14 +33,14 @@ Route::group([
 	'namespace'  => 'Dashboard',
 	'prefix'     => 'dashboard',
 ], function () {
-	Route::get('/', 'HomeController@index')->name('dashboard.home');
-	
-	Route::get('/post/create', 'PostController@create')->name('dashboard.post.create');
-	Route::post('/post', 'PostController@store')->name('dashboard.post.store');
-	Route::get('/post/edit/{post}', 'PostController@edit')->name('dashboard.post.edit');
-	Route::post('/post/edit/{post}', 'PostController@update')->name('dashboard.post.update');
+	Route::get('/art', 'ArtController@create')->name('dashboard.art.create');
+	Route::post('/art', 'ArtController@store')->name('dashboard.art.store');
+	Route::get('/art/{art}/edit', 'ArtController@edit')->name('dashboard.art.edit');
+	Route::post('/art/{art}/update', 'ArtController@update')->name('dashboard.art.update');
+	Route::delete('/art/{art}', 'ArtController@delete')->name('dashboard.art.delete');
 
 	Route::get('/profile', 'UserController@showProfile')->name('dashboard.user.profile');
 	Route::post('/profile', 'UserController@updateUser')->name('dashboard.user.update');
 	Route::get('/orders', 'OrdersController@index')->name('dashboard.user.orders');
+	Route::post('/orders/{order}', 'OrdersController@update')->name('dashboard.orders.update');
 });
