@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
+use App\Art;
 
-class PostController extends Controller
+class ArtController extends Controller
 {
 	public function __construct() {
 		//
@@ -13,7 +13,7 @@ class PostController extends Controller
 
     public function index() {
     	$payload = [
-    		'posts' => Post::all()
+    		'art' => Art::all()
     	];
     	return view('public.index')->with($payload);
     }
