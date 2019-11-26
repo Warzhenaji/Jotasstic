@@ -43,7 +43,7 @@
                 </div>
                 @auth
                 <div class="flex flex-row relative">
-                    <a href="{{ route('dashboard.post.create') }}" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Add Artwork</a>
+                    <a href="{{ route('dashboard.art.create') }}" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Add Artwork</a>
                     <navbar-dropdown
                         :links="{{ json_encode([
                             ['name' => 'Admin Profile', 'url' => route('dashboard.user.profile')],
