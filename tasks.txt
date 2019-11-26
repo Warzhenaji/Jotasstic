@@ -1,7 +1,7 @@
 # Art Store Tasks
 
 ## Refactor 1
-- [ ] Routes
+- [X] Routes
 	- [X] PUBLIC
 		- [X] GET - Landing Page
 		- [X] GET - About Page
@@ -19,6 +19,7 @@
 		- [X] POST - Order Viewer Edit
 		- [X] POST - Artwork View Editor
 		- [X] DELETE - Delete Artwork
+	- [X] Brian Check
 - [ ] Migrations
 - [ ] Models
 - [ ] Controllers
