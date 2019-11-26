@@ -1,5 +1,28 @@
 # Art Store Tasks
 
+## Refactor 1
+- [ ] Routes
+	- [X] PUBLIC
+		- [X] GET - Landing Page
+		- [X] GET - About Page
+		- [X] GET - Explore Page
+		- [X] GET - Contact Page
+		- [X] GET - Artwork View Page
+		- [X] POST - Artwork View Page (Order Form Portion)
+		- [X] POST - Contact Page
+	- [X] AUTH
+		- [X] GET - Profile Page
+		- [X] POST - Update User Info
+		- [X] GET - Orders Manager (Table)
+		- [X] GET - Order Viewer
+		- [X] GET - Artwork View Editor
+		- [X] POST - Order Viewer Edit
+		- [X] POST - Artwork View Editor
+		- [X] DELETE - Delete Artwork
+- [ ] Migrations
+- [ ] Models
+- [ ] Controllers
+
 ## User Management
 - [X] Remove Registration
 - [X] Log in / Log out
