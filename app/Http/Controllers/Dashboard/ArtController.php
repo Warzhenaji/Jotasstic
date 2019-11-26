@@ -102,4 +102,8 @@ class ArtController extends Controller
 
         return redirect()->back();
     }
+
+    public function requestPurchase() {
+        
+    }
 }
