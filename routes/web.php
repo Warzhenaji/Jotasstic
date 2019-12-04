@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/', 'ArtController@index')->name('dashboard.art.index');
-Route::get('/art/{art}', 'ArtController@show')->name('dashboard.art.show');
-Route::post('/art/{art}', 'ArtController@requestPurchase')->name('art.request_purchase');
+Route::get('/', 'dashboard\ArtController@index')->name('dashboard.landing');
+Route::get('/art/{art}', 'dashboard\ArtController@show')->name('dashboard.art.show');
+Route::post('/art/{art}', 'dashboard\ArtController@requestPurchase')->name('art.request_purchase');
 
-Route::get('/about', 'AboutController@index')->name('public.about');
-Route::get('/purchase', 'PurchaseController@index')->name('public.purchase');
-Route::get('/contact', 'ContactController@index')->name('public.contact');
-Route::get('/explore', 'ArtController@explore')->name('dashboard.art.explore');
+Route::get('/about', 'dashboard\AboutController@index')->name('dashboard.about');
+Route::get('/purchase', 'dashboard\PurchaseController@index')->name('public.purchase');
+Route::get('/contact', 'dashboard\ContactController@index')->name('public.contact');
+Route::get('/explore', 'dashboard\ArtController@explore')->name('dashboard.art.explore');
 
 Auth::routes(['register' => false]);
 

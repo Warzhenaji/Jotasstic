@@ -83,6 +83,7 @@ class ArtController extends Controller
             'title'       => $title,
             'description' => $description,
         ];
+        
         /*return response()->json($inputs);*/
 
         $updatedArt = $art->update($inputs);

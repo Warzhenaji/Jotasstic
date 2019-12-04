@@ -29,10 +29,10 @@
 			</div>
 			<div class="flex flex-col w-3/4 px-4">
 				<p class="text-gray-100 text-3xl font-bold">Live Artwork</p>
-			@foreach($posts->chunk(3) as $postchunk)
+			@foreach($art->chunk(3) as $artChunk)
 				<div class="flex justify-between post-card-row">	
-					@foreach($postchunk as $post) 
-						@include('dashboard.partials.post_card', ['post' => $post])
+					@foreach($artChunk as $art) 
+						@include('dashboard.partials.post_card', ['art' => $art])
 					@endforeach
 				</div>
 			@endforeach

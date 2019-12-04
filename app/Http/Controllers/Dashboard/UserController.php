@@ -18,7 +18,7 @@ class UserController extends Controller
     	$user = auth()->user();
     	$payload = [
     		'user' => $user,
-    		'posts' => $user->posts,
+    		'art' => $user->art,
     	];
         return view('dashboard.users.profile')->with($payload);
     }

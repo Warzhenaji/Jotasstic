@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-	@foreach($posts as $post)
+	@foreach($arts as $art)
 		<p>
 			<img src="{{ url('/img/'. $post->media) }}">
 		</p>
