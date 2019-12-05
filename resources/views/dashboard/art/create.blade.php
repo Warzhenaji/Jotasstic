@@ -2,7 +2,7 @@
 
 @section('content')
 	<div class="w-full flex justify-center">
-	    <form action="{{ route('dashboard.post.store') }}" method="POST" enctype="multipart/form-data" class="flex-col flex w-1/3 card-bg shadow-md rounded px-8 pt-6 pb-8 mb-4">
+	    <form action="{{ route('dashboard.art.store') }}" method="POST" enctype="multipart/form-data" class="flex-col flex w-1/3 card-bg shadow-md rounded px-8 pt-6 pb-8 mb-4">
 	        @csrf
 
 	        <div class="mb-4">
