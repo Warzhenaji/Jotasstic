@@ -46,12 +46,12 @@ class ArtController extends Controller
             'media'       => $newFileName,
         ];
 
-        $request->meme->storeAs('img/uploads', $newFileName, 'public_path');
+        $request->art->storeAs('img/uploads', $newFileName, 'public_path');
 
         $newArt = Art::create($inputs);
 
         if ($newArt) {
-            return redirect()->route('dashboard.art.index')->with('status', 'Media Posted!');
+            return redirect()->route('dashboard.art.index')->with('status', 'Art Posted!');
         }
         return redirect()->route('dashboard.art.index')->with('status', 'Something went wrong...');
     }

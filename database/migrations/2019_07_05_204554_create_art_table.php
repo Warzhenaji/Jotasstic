@@ -17,7 +17,7 @@ class CreateArtsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->string('media');
-            $table->text('description');
+            $table->unsignedInteger('amount')->default(0);
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
 

@@ -4,6 +4,9 @@
 		<div class="font-bold text-xl mb-2">
 			<a href="{{ route('dashboard.art.show', $art->id) }}">{{ $art->title }}</a>
 		</div>
+		<div class="">
+			{{ $art->amount_formatted }}
+		</div>
 		@auth
 		<a href="{{ route('dashboard.art.edit', $art->id) }}" class="text-right block">Edit</a>
 		@endauth
