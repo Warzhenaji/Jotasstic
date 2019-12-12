@@ -21,7 +21,7 @@
 </head>
 <body class="body-bg">
     <div id="app">
-        <nav class="flex bg-nim-blue-darkest items-center justify-between flex-wrap nav-bg shadow-outline p-6 z-50">
+        <nav class="flex bg-nim-blue-darkest items-center justify-between flex-wrap nav-bg p-6 z-50">
             <div class="flex items-center flex-shrink-0 text-white mr-6">               
                 <span class="font-semibold text-xl tracking-tight">
                     <a href="{{ url('/') }}">{{ config('app.name', 'Laravel') }}</a>
