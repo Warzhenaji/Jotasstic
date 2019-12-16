@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateArtsTable extends Migration
+class CreateArtTable extends Migration
 {
     /**
      * Run the migrations.
