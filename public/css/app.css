@@ -7586,16 +7586,16 @@ video {
   display: block;
 }
 
-.user-banner {
-  background: border-box transparent url("../img/user-banner.jpg") center no-repeat;
-}
-
 .landing-background {
   background: url("../img/landing-background.png") center no-repeat;
 }
 
 .about-background {
   background: url("../img/philly-bridge.png") center no-repeat;
+}
+
+.purchase-background {
+  background: url("../img/purchase-background.jpg") center no-repeat;
 }
 
 .about-card-background {

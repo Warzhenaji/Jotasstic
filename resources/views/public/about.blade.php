@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 	<div class="flex bg-contain about-background">
 		<!-- Background photograph by Jotasstic Photography -->
 		<div class="flex justify-center items-center w-full h-screen">
