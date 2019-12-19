@@ -1,15 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-	<div class="w-full py-16 bg-blue-400 flex items-center justify-center user-banner">
-		<p class="text-6xl font-bold w-3/4 text-white text-shadow-black">{{ $user->possessive_name }} Profile</p>
-		<!-- Photo by Jeremy Thomas -->
-		<!-- https://unsplash.com/@jeremythomasphoto?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge -->
-	</div>
 	<div class="flex w-full py-4 justify-center">
-		<div class="flex w-3/4">
-			<div class="flex flex-col w-1/4 mr-6">
-				<div class="flex flex-col">
+		<div class="flex w-3/4 w-full">
+			<div class="flex flex-col w-1/4 mr-32 w-full">
+				<div class="flex flex-col w-full">
 					<p class="text-gray-500 text-sm font-bold uppercase">Join Date</p>
 					<p class="text-gray-100 text-2xl font-bold">{{ $user->join_date }}</p>
 					<form action="{{ route('dashboard.user.update') }}" method="post">
@@ -29,6 +24,7 @@
 			</div>
 			<div class="flex flex-col w-3/4 px-4">
 				<p class="text-gray-100 text-3xl font-bold">Live Artwork</p>
+				@if(count($art) > 1)
 				@foreach($art->chunk(3) as $artChunk)
 					<div class="flex justify-between post-card-row">	
 						@foreach($artChunk as $art) 
@@ -36,6 +32,7 @@
 						@endforeach
 					</div>
 				@endforeach
+				@endif
 			</div>		
 		</div>
 	</div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +20,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="body-bg">
-    <div id="app">
+    <div id="app" class="flex flex-col h-full">
         <nav class="flex bg-nim-blue-darkest items-center justify-between flex-wrap nav-bg p-6 z-50">
             <div class="flex items-center flex-shrink-0 text-white mr-6">               
                 <span class="font-semibold text-xl tracking-tight">
@@ -57,7 +57,7 @@
                 @endauth
             </div>
         </nav>
-        <main class="">
+        <main class="flex flex-grow">
                 @if (session('status'))
                  @if (is_array(session('status')))
                     <div class="w-full absolute z-50">
@@ -81,11 +81,11 @@
                 @endif
             @yield('content')
         </main>
-    </div>
-    <div class="bg-nim-blue-darkest w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <footer id="footer" class="text-center w-full text-center border-grey p-4">
-            <p class="text-white">&copy; 2019 Jotasstic</p>
-        </footer>
+        <div class="bg-nim-blue-darkest w-full block lg:flex lg:items-center lg:w-auto">
+            <footer id="footer" class="text-center w-full text-center border-grey p-4 pin-b">
+                <p class="text-white">&copy; {{ date('Y') }} Jotasstic</p>
+            </footer>
+        </div>
     </div>
 </body>
 </html>

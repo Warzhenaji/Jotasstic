@@ -13,10 +13,10 @@
 
 Route::get('/', 'dashboard\ArtController@index')->name('dashboard.landing');
 Route::get('/art/{art}', 'dashboard\ArtController@show')->name('dashboard.art.show');
-Route::post('/art/{art}', 'dashboard\ArtController@requestPurchase')->name('art.request_purchase');
 
 Route::get('/about', 'dashboard\AboutController@index')->name('dashboard.about');
 Route::get('/purchase', 'dashboard\PurchaseController@index')->name('public.purchase');
+Route::post('/purchase', 'Dashboard\PurchaseController@store')->name('public.purchase.request');
 Route::get('/contact', 'dashboard\ContactController@index')->name('public.contact');
 Route::get('/explore', 'dashboard\ArtController@explore')->name('dashboard.art.explore');
 
@@ -28,8 +28,8 @@ Route::group([
 	'prefix'     => 'dashboard',
 ], function () {
 	Route::get('/art', 'ArtController@index')->name('dashboard.art.index');
+	Route::get('/art/new', 'ArtController@create')->name('dashboard.art.create');
 	Route::get('/art/{art}', 'ArtController@show')->name('dashboard.art.show');
-	Route::get('/art', 'ArtController@create')->name('dashboard.art.create');
 	Route::post('/art', 'ArtController@store')->name('dashboard.art.store');
 	Route::get('/art/{art}/edit', 'ArtController@edit')->name('dashboard.art.edit');
 	Route::post('/art/{art}/update', 'ArtController@update')->name('dashboard.art.update');

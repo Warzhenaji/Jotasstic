@@ -31,7 +31,7 @@ class ArtController extends Controller
     public function store(Request $request) {
         $user = auth()->user();
         $title = $request->input('title');
-        $description = $request->input('description');
+        $amount = $request->input('amount');
         $file = $request->file('art');
 
         $fullFileName = $file->getClientOriginalName();
@@ -41,7 +41,7 @@ class ArtController extends Controller
 
         $inputs = [
             'title'       => $title,
-            'description' => $description,
+            'amount'      => $amount,
             'user_id'     => $user->id,
             'media'       => $newFileName,
         ];
@@ -103,8 +103,4 @@ class ArtController extends Controller
 
         return redirect()->back();
     }
-
-    public function requestPurchase() {
-
-    } 
 }

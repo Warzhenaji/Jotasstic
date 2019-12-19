@@ -16,4 +16,9 @@ class PurchaseController extends Controller
     {
         return view('public.purchase');
     }
+
+    public function store(Request $request)
+    {
+    	return response()->json($request);
+    }
 }

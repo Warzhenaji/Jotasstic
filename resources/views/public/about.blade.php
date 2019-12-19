@@ -2,7 +2,7 @@
 
 @section('content')
 
-	<div class="flex bg-contain about-background">
+	<div class="flex bg-contain about-background w-full">
 		<!-- Background photograph by Jotasstic Photography -->
 		<div class="flex justify-center items-center w-full h-screen">
 			<div class="flex h-full justify-center max-w-lg w-full lg:max-w-full lg:flex pt-12 pb-12">

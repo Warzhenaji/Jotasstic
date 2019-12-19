@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+use App\Art;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -18,7 +19,7 @@ class UserController extends Controller
     	$user = auth()->user();
     	$payload = [
     		'user' => $user,
-    		'art' => $user->art,
+    		'art' => Art::all(),
     	];
         return view('dashboard.users.profile')->with($payload);
     }
