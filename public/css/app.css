@@ -7610,6 +7610,10 @@ video {
   background: url("../img/login-background.jpg") center no-repeat;
 }
 
+.orders-background {
+  background: url("../img/orders-background.jpg") center no-repeat;
+}
+
 .about-card-background {
   background: url("../img/jo-about.jpg") center no-repeat;
 }
