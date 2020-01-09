@@ -48,6 +48,10 @@ class User extends Authenticatable
         return $name."'s";
     }
 
+    public function getFullNameAttribute() {
+        return $this->name . ' ' . $this->last_name;
+    }
+
     public function getJoinDateAttribute() {
         return date('M jS, Y', strtotime($this->attributes['created_at']));
     }
@@ -63,5 +67,5 @@ class User extends Authenticatable
 
     public function invitation() {
         return $this->hasOne(Invitation::class, 'email', 'email');
-    }   
+    }  
 }
