@@ -35,6 +35,8 @@ Route::group([
 	Route::post('/art/{art}/update', 'ArtController@update')->name('dashboard.art.update');
 	Route::delete('/art/{art}', 'ArtController@delete')->name('dashboard.art.delete');
 
+	Route::post('/purchase-request/{purchaseRequest}', 'PurchaseController@update')->name('dashboard.purchase.update');
+
 	Route::get('/profile', 'UserController@showProfile')->name('dashboard.user.profile');
 	Route::post('/profile', 'UserController@updateUser')->name('dashboard.user.update');
 	Route::get('/orders', 'OrdersController@index')->name('dashboard.user.orders');

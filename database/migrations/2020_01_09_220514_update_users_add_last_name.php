@@ -14,7 +14,7 @@ class UpdateUsersAddLastName extends Migration
     public function up()
     {
         Schema::table('users', function(Blueprint $table) {
-            $table->string('last_name')->after('name');
+            $table->string('last_name')->default('')->after('name');
         });
     }
 
