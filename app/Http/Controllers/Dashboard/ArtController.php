@@ -13,8 +13,11 @@ class ArtController extends Controller
         return view('landing');
     }
 
-    public function show() {
-        
+    public function show(Art $art) {
+        $payload = [
+            'art' => $art,
+        ];
+        return view('dashboard.art.show')->with($payload);
     }
 
     public function explore() {
