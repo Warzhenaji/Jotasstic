@@ -91,9 +91,9 @@ class ArtController extends Controller
 
         $updatedArt = $art->update($inputs);
         if ($updatedArt) {
-            return redirect()->route('dashboard.home')->with('status', 'Media Updated!');
+            return redirect()->route('dashboard.art.explore')->with('status', 'Media Updated!');
         }
-        return redirect()->route('dashboard.home')->with('status', 'Something went wrong...');
+        return redirect()->route('dashboard.art.explore')->with('status', 'Something went wrong...');
     }
 
     public function delete(Art $Art) {
