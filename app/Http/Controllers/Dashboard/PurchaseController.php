@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\PurchaseRequest;
 use App\Http\Requests\CreatePurchaseRequest;
+use App\Art;
 
 class PurchaseController extends Controller
 {
@@ -16,7 +17,10 @@ class PurchaseController extends Controller
      */
     public function index()
     {
-        return view('public.purchase');
+        $payload = [
+            'art' => Art::all()
+        ];
+        return view('public.purchase')->with($payload);
     }
 
     public function store(CreatePurchaseRequest $request)

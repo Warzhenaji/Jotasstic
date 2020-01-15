@@ -78,6 +78,12 @@
 	text-shadow: 0 0 1px rgba(0, 0, 0, 0.75);
 }
 
+.purchase-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1.5rem;
+}
+
 .post-card-row {
 	.post-card {
 		@apply mr-4;

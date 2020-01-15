@@ -16,4 +16,9 @@ class OrdersController extends Controller
     {
         return view('dashboard.users.orders');
     }
+
+    public function store() 
+    {
+    	
+    }
 }
