@@ -6,6 +6,6 @@
     "\\resources\\views\\dashboard",
     "\\resources\\views\\dashboard\\art"
   ],
-  "SelectedNode": "\\resources\\views\\dashboard\\art\\show.blade.php",
+  "SelectedNode": "\\resources\\views\\home.blade.php",
   "PreviewInSolutionExplorer": false
 }
